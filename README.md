@@ -212,24 +212,16 @@ This ensures the system works in serverless environments (Vercel) while providin
 
 ---
 
-## Getting Started
+## Showcase Structure
 
-```bash
-# Clone the showcase repository
-git clone https://github.com/yourusername/automate-showcase
-cd automate-showcase
+Since this is a structural showcase with the core production implementation remaining private, the repository is organized to highlight key architectural patterns rather than to be executed locally. 
 
-# Install dependencies
-pip install -r requirements.txt
+You can explore the public-safe implementation examples in the `sample-code/` directory:
 
-# Set environment variables
-export OPENAI_API_KEY="your-key-here"
-
-# Run the server
-uvicorn main:app --reload
-```
-
-The frontend is available at `http://localhost:8000`.
+* **`state/`** → The unified `TypedDict` and Pydantic schemas flowing through the LangGraph pipeline.
+* **`nodes/`** → Examples of individual agent node structures and error-handling wrappers.
+* **`routing/`** → Conditional routing logic controlling the pipeline flow and human-in-the-loop gates.
+* **`engine/`** → The custom OOXML/XPath XML transformation logic used for template generation.
 
 ---
 
